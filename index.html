@@ -13,6 +13,7 @@
             font-family: 'Poppins', sans-serif;
             color: #3b4252;
             background-color: #f7f9fc;
+            overflow-x: hidden; /* Prevents horizontal scroll from animations */
         }
 
         .section-title {
@@ -149,6 +150,18 @@
         .cv-button:hover svg {
             transform: translateY(2px);
         }
+        
+        /* Fade-in and Slide-up Animation Classes */
+        .animated-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .animated-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -198,7 +211,7 @@
     <main class="container mx-auto px-4 py-16 space-y-20">
         
         <!-- About Me Section -->
-        <section id="about">
+        <section id="about" class="animated-section">
             <h2 class="section-title text-center">About Me</h2>
             <div class="card max-w-4xl mx-auto">
                 <p class="text-lg leading-relaxed text-gray-600">
@@ -208,7 +221,7 @@
         </section>
         
         <!-- Education Section -->
-        <section id="education" class="py-16">
+        <section id="education" class="py-16 animated-section">
             <h2 class="section-title text-center">Education</h2>
             <div class="space-y-8">
                 <div class="card">
@@ -226,7 +239,7 @@
         </section>
 
         <!-- Experience & Accomplishments Section -->
-        <section id="experience-and-accomplishments">
+        <section id="experience-and-accomplishments" class="animated-section">
             <h2 class="section-title text-center">Experience & Accomplishments</h2>
             <div class="card max-w-4xl mx-auto">
                 <h4 class="text-xl font-semibold mb-2 text-gray-800">Leadership & Activities</h4>
@@ -245,7 +258,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills">
+        <section id="skills" class="animated-section">
             <h2 class="section-title text-center">Core Skills</h2>
             <div class="card max-w-4xl mx-auto">
                 <div class="space-y-6">
@@ -304,7 +317,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects">
+        <section id="projects" class="animated-section">
             <h2 class="section-title text-center">Projects & Initiatives</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card">
@@ -357,7 +370,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-16">
+        <section id="contact" class="py-16 animated-section">
             <h2 class="section-title text-center">Contact Details</h2>
             <div class="card max-w-2xl mx-auto">
                 <div class="space-y-4">
@@ -426,6 +439,27 @@
                     navLinks.classList.remove('active');
                     hamburgerMenu.classList.remove('active');
                 });
+            });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    } else {
+                        entry.target.classList.remove('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animated-section').forEach(section => {
+                observer.observe(section);
             });
         });
     </script>
