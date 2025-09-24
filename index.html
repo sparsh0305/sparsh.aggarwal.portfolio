@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heaven's Bakery - Artisan Breads & Pastries</title>
+    <title>Urban Threads | Style That Defines You</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Heaven's Bakery</h2>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">Urban Threads</a>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#menu" class="nav-link">Menu</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -30,146 +33,150 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Artisan Breads & Pastries</h1>
-            <p class="hero-subtitle">Handcrafted with love, baked to perfection every morning</p>
-            <button class="cta-button" onclick="scrollToSection('menu')">Explore Our Menu</button>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+            <h1 class="headline">Discover Your Style</h1>
+            <p class="subheading">Trendy outfits for every occasion</p>
+            <a href="#collection" class="cta-button">Shop Collection</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">Our Story</h2>
-                    <p class="about-text">
-                        For over three decades, Heaven's Bakery has been crafting exceptional breads and pastries using traditional techniques passed down through generations. Our master bakers start before dawn, ensuring every loaf is baked fresh daily.
-                    </p>
-                    <p class="about-text">
-                        We source only the finest ingredients - organic flours, European butter, and locally sourced eggs - to create the authentic flavors that have made us a beloved neighborhood institution.
-                    </p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h3>30+</h3>
-                            <p>Years of Excellence</p>
-                        </div>
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Daily Fresh Items</p>
-                        </div>
-                        <div class="stat">
-                            <h3>1000+</h3>
-                            <p>Happy Customers</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="/api/placeholder/600/400" alt="Bakery Interior" />
-                </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Inside our store">
+            </div>
+            <div class="about-text">
+                <h2>About Urban Threads</h2>
+                <p>Urban Threads was founded with a simple mission: to provide high-quality, trendy clothing at affordable prices. Our carefully curated collection features the latest styles that help you express your unique personality.</p>
+                <p>We believe that fashion should be accessible to everyone, which is why we work directly with manufacturers to bring you premium quality without the premium price tag.</p>
+                <p>Visit our store to experience personalized styling advice from our fashion experts or shop online for convenience.</p>
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="menu">
+    <!-- Collection Section -->
+    <section id="collection" class="collection">
         <div class="container">
-            <h2 class="section-title">Our Menu</h2>
-            <div class="menu-filters">
-                <button class="filter-btn active" data-filter="all">All Items</button>
-                <button class="filter-btn" data-filter="breads">Breads</button>
-                <button class="filter-btn" data-filter="pastries">Pastries</button>
-                <button class="filter-btn" data-filter="cakes">Cakes</button>
+            <h2>Our Collection</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="men">Men</button>
+                <button class="filter-btn" data-filter="women">Women</button>
+                <button class="filter-btn" data-filter="accessories">Accessories</button>
             </div>
-            <div class="menu-grid" id="menu-grid">
-                <!-- Breads -->
-                <div class="menu-item" data-category="breads">
-                    <div class="menu-item-image">
-                        <img src="/api/placeholder/300/200" alt="Artisan Sourdough" />
-                        <div class="menu-item-overlay">
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
+            <div class="product-grid">
+                <!-- Men's Products -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Men's Casual Shirt">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Artisan Sourdough</h3>
-                        <p>Traditional sourdough with a perfect crust and tangy flavor</p>
-                        <span class="price">Rs.200</span>
+                    <div class="product-info">
+                        <h3>Classic Denim Jacket</h3>
+                        <p class="price">₹1,999</p>
                     </div>
                 </div>
-
-                <div class="menu-item" data-category="breads">
-                    <div class="menu-item-image">
-                        <img src="/api/placeholder/300/200" alt="Multigrain Loaf" />
-                        <div class="menu-item-overlay">
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Men's Formal Shirt">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Multigrain Loaf</h3>
-                        <p>Hearty blend of seeds and grains for a nutritious start</p>
-                        <span class="price">Rs.175</span>
+                    <div class="product-info">
+                        <h3>Slim Fit Chinos</h3>
+                        <p class="price">₹1,499</p>
                     </div>
                 </div>
-
-                <!-- Pastries -->
-                <div class="menu-item" data-category="pastries">
-                    <div class="menu-item-image">
-                        <img src="/api/placeholder/300/200" alt="Chocolate Croissant" />
-                        <div class="menu-item-overlay">
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Men's Bomber Jacket">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Chocolate Croissant</h3>
-                        <p>Buttery, flaky pastry filled with rich dark chocolate</p>
-                        <span class="price">Rs.225</span>
+                    <div class="product-info">
+                        <h3>Urban Bomber Jacket</h3>
+                        <p class="price">₹2,799</p>
                     </div>
                 </div>
-
-                <div class="menu-item" data-category="pastries">
-                    <div class="menu-item-image">
-                        <img src="/api/placeholder/300/200" alt="Almond Danish" />
-                        <div class="menu-item-overlay">
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Men's Sneakers">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Almond Danish</h3>
-                        <p>Delicate pastry topped with sliced almonds and sweet glaze</p>
-                        <span class="price">Rs.300</span>
+                    <div class="product-info">
+                        <h3>Street Style Sneakers</h3>
+                        <p class="price">₹3,299</p>
                     </div>
                 </div>
-
-                <!-- Cakes -->
-                <div class="menu-item" data-category="cakes">
-                    <div class="menu-item-image">
-                        <img src="/api/placeholder/300/200" alt="Red Velvet Cake" />
-                        <div class="menu-item-overlay">
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
+                
+                <!-- Women's Products -->
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Women's Summer Dress">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Red Velvet Cake</h3>
-                        <p>Classic red velvet with cream cheese frosting</p>
-                        <span class="price">Rs.595</span>
+                    <div class="product-info">
+                        <h3>Floral Summer Dress</h3>
+                        <p class="price">₹2,299</p>
                     </div>
                 </div>
-
-                <div class="menu-item" data-category="cakes">
-                    <div class="menu-item-image">
-                        <img src="/api/placeholder/300/200" alt="Vanilla Bean Cake" />
-                        <div class="menu-item-overlay">
-                            <button class="add-to-cart">Add to Cart</button>
-                        </div>
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Women's Casual Top">
                     </div>
-                    <div class="menu-item-content">
-                        <h3>Vanilla Bean Cake</h3>
-                        <p>Moist vanilla cake with Madagascar vanilla bean frosting</p>
-                        <span class="price">Rs.375</span>
+                    <div class="product-info">
+                        <h3>Casual Blouse</h3>
+                        <p class="price">₹1,299</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Women's Leather Jacket">
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Leather Jacket</h3>
+                        <p class="price">₹4,599</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Women's Jumpsuit">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegant Jumpsuit</h3>
+                        <p class="price">₹3,199</p>
+                    </div>
+                </div>
+                
+                <!-- Accessories -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Stylish Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Minimalist Watch</h3>
+                        <p class="price">₹2,499</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Leather Bag">
+                    </div>
+                    <div class="product-info">
+                        <h3>Leather Tote Bag</h3>
+                        <p class="price">₹3,499</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1608042314453-ae338d80c427?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Sunglasses">
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Sunglasses</h3>
+                        <p class="price">₹1,899</p>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1613152184920-bc1c4ab468ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Jewelry Set">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gold Jewelry Set</h3>
+                        <p class="price">₹5,999</p>
                     </div>
                 </div>
             </div>
@@ -179,38 +186,42 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-grid">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
                 <div class="contact-info">
-                    <h2 class="section-title">Visit Us</h2>
-                    <div class="contact-item">
-                        <h3>Address</h3>
-                        <p>301 Chaat Bazaar lane<br>Connaught PLace<br>New Delhi-110001</p>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Fashion Street, Style City, India</p>
                     </div>
-                    <div class="contact-item">
-                        <h3>Hours</h3>
-                        <p>Monday - Friday: 6:00 AM - 8:00 PM<br>Saturday - Sunday: 7:00 AM - 9:00 PM</p>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+91 98765 43210</p>
                     </div>
-                    <div class="contact-item">
-                        <h3>Contact</h3>
-                        <p>Phone: +91 98765 43210<br>Email: contact@heavensbakery.com</p>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@urbanthreads.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <h3>Order Online</h3>
-                    <form id="order-form">
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <span class="error-message"></span>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" placeholder="Your Email" required>
+                            <span class="error-message"></span>
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                            <span class="error-message"></span>
                         </div>
-                        <div class="form-group">
-                            <textarea id="order" name="order" placeholder="Your Order Details" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Place Order</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -218,31 +229,13 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Heaven's Bakery</h3>
-                    <p>Crafting exceptional breads and pastries since 1990</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#menu">Menu</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Heaven's Bakery. All rights reserved.</p>
+            <p>&copy; 2025 Urban Threads. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
